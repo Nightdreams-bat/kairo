@@ -19,6 +19,12 @@ without your approval.**
 
 ---
 
+<table>
+<tr><td><b>Problem</b></td><td>Cold outreach is hours of sending, following up, reading replies and booking calls, and most tools want your lead list on their server.</td></tr>
+<tr><td><b>Approach</b></td><td>A Windows app that reads leads from an Excel file and sends through your own Gmail. Claude only sorts the replies and drafts answers. Nothing goes out until you click approve.</td></tr>
+<tr><td><b>Result</b></td><td>A one-click installer, with 400+ tests that run on every push.</td></tr>
+</table>
+
 ## Engineering highlights
 
 - **Real Google integration, no shortcuts.** Sending is the Gmail API under a full
