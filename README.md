@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/header.png" alt="Kairo: local AI cold outreach" width="100%">
+<img src="assets/banner.png" alt="Kairo: local AI cold outreach" width="100%">
 
 <br>
 
