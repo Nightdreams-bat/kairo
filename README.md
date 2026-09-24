@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.jpg" alt="Kairo — AI-powered outreach platform" width="100%">
+<img src="assets/header.png" alt="Kairo: local AI cold outreach" width="100%">
 
 <br>
 
@@ -67,18 +67,18 @@ Google sign-in (OAuth), not SMTP or app passwords.
 
 ## Features
 
-| | Feature | What it does |
-|---|---|---|
-| ✉️ | **AI reply handling** | Claude Haiku classifies each inbound reply (yes / no / maybe / question) and drafts the follow-up — a calendar invite + confirmation for a "yes", an open-times email otherwise, a polite acknowledgement for a "no". Draft-and-approve only. |
-| 📨 | **Multi-touch drip** | Up to three spaced follow-ups to cold leads who never replied (default 3 / 7 / 14 days), with a soft "breakup" email on the last touch. Stops the instant a lead replies or books. |
-| 📅 | **Auto-scheduling** | For a "yes", Kairo finds an open slot against your Google Calendar free/busy, drafts the invite and a confirmation email, and books both on approval. |
-| ⏰ | **24h call reminders** | A background scan finds leads whose meeting is ~24 hours away and sends one reminder each. The scan window overlaps between runs so no meeting slips through. |
-| 🔍 | **Find leads** | Keyless web search + email scraping to pull new prospects straight into the sheet (beta). |
-| 📊 | **Excel-backed CRM** | No database — your `.xlsx` *is* the store. Kairo auto-detects your headers (`Surname`, `Organisation`, `E-mail Address`, split first/last…) and lets you override each mapping. A row with only an email still works. |
-| 🛡️ | **Compliance & safety** | Postal address + one-line opt-out and `List-Unsubscribe` headers on every send, an always-on keyword opt-out scan (EN/RO, no API key needed), per-lead suppression, a permanent blocklist, jittered send timing, and a daily send cap with warm-up ramp. |
-| 🚦 | **Priority scoring** | When the daily cap can't fit every queued lead, the highest-priority ones send first — a numeric `Priority` column if present, otherwise a small rules score. No AI, nothing written back. |
-| 📈 | **Dashboard & logs** | Ten offline pages — stat tiles, a background "Run now" panel with a live log tail, the full send history, diagnostics, and a plain-English activity feed. |
-| 🔒 | **Privacy first** | No telemetry, no analytics, no third-party hosting, no open/click tracking. The only data that leaves the machine is the email you send and (if reply handling is on) the reply text sent to Anthropic. |
+| Feature | What it does |
+|---|---|
+| **AI reply handling** | Claude Haiku classifies each inbound reply (yes / no / maybe / question) and drafts the follow-up — a calendar invite + confirmation for a "yes", an open-times email otherwise, a polite acknowledgement for a "no". Draft-and-approve only. |
+| **Multi-touch drip** | Up to three spaced follow-ups to cold leads who never replied (default 3 / 7 / 14 days), with a soft "breakup" email on the last touch. Stops the instant a lead replies or books. |
+| **Auto-scheduling** | For a "yes", Kairo finds an open slot against your Google Calendar free/busy, drafts the invite and a confirmation email, and books both on approval. |
+| **24h call reminders** | A background scan finds leads whose meeting is ~24 hours away and sends one reminder each. The scan window overlaps between runs so no meeting slips through. |
+| **Find leads** | Keyless web search + email scraping to pull new prospects straight into the sheet (beta). |
+| **Excel-backed CRM** | No database — your `.xlsx` *is* the store. Kairo auto-detects your headers (`Surname`, `Organisation`, `E-mail Address`, split first/last…) and lets you override each mapping. A row with only an email still works. |
+| **Compliance & safety** | Postal address + one-line opt-out and `List-Unsubscribe` headers on every send, an always-on keyword opt-out scan (EN/RO, no API key needed), per-lead suppression, a permanent blocklist, jittered send timing, and a daily send cap with warm-up ramp. |
+| **Priority scoring** | When the daily cap can't fit every queued lead, the highest-priority ones send first — a numeric `Priority` column if present, otherwise a small rules score. No AI, nothing written back. |
+| **Dashboard & logs** | Ten offline pages — stat tiles, a background "Run now" panel with a live log tail, the full send history, diagnostics, and a plain-English activity feed. |
+| **Privacy first** | No telemetry, no analytics, no third-party hosting, no open/click tracking. The only data that leaves the machine is the email you send and (if reply handling is on) the reply text sent to Anthropic. |
 
 ---
 
