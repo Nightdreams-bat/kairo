@@ -25,6 +25,10 @@ DEFAULT_SLOTS = [
     datetime(2026, 9, 1, 10, 0),
 ]
 
+# Fixed "today" so the hardcoded 2026-09-02 proposals stay inside the
+# min-notice / scheduling window no matter when the suite runs.
+NOW = datetime(2026, 8, 31, 9, 0)
+
 _RealCalendarError = scheduling.calendar_api.CalendarError
 
 
@@ -60,7 +64,7 @@ def cal(monkeypatch):
 def _plan(classification, cal_fake=None, monkeypatch=None):
     if cal_fake is not None:
         monkeypatch.setattr(scheduling, "calendar_api", cal_fake)
-    return scheduling.plan_action(classification, LEAD, CFG, "me@example.com")
+    return scheduling.plan_action(classification, LEAD, CFG, "me@example.com", now=NOW)
 
 
 # --- non-yes intents --------------------------------------------------------
@@ -234,6 +238,6 @@ def test_custom_templates_from_config_are_used(monkeypatch):
     cfg = dict(CFG, meeting_confirm_body_template="CUSTOM {{ name }} {{ meeting_time }}")
     monkeypatch.setattr(scheduling, "calendar_api", cal)
     action = scheduling.plan_action(
-        {"intent": "yes", "proposed_start": "2026-09-02T14:00:00"}, LEAD, cfg, "me@x.com"
+        {"intent": "yes", "proposed_start": "2026-09-02T14:00:00"}, LEAD, cfg, "me@x.com", now=NOW
     )
     assert action["email_body"].startswith("CUSTOM Jane Lee")
